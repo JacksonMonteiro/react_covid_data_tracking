@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const ContainerCase = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin: 50px auto 0 auto;
     max-width:1000px;
 
@@ -17,7 +19,6 @@ export const ContainerCase = styled.div`
 export const CasesContainer = styled.div`
     flex: 1;
     padding: 20px;
-    margin:0 20px;
     color: #000;
     background: #DDD;
     border-radius: 16px;
@@ -31,7 +32,6 @@ export const CasesContainer = styled.div`
 export const DeathContainer = styled.div`
     flex: 1;
     padding: 20px;
-    margin:0 20px;
     color: #000;
     background: #DDD;
     border-radius: 16px;
@@ -45,7 +45,6 @@ export const DeathContainer = styled.div`
 export const RecoveredContainer = styled.div`
     flex: 1;
     padding: 20px;
-    margin:0 20px;
     color: #000;
     background: #DDD;
     border-radius: 16px;

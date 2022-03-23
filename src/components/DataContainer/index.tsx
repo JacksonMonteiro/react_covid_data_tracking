@@ -7,6 +7,10 @@ export const DataContainer = () => {
     const [deaths, setDeaths] = useState(0);
     const [recovered, setRecovered] = useState(0);
 
+    useEffect(() => {
+        setData();
+    }, []);
+
     const setData = async () => {
         let json = await Api.getWorldData();
         setCases(json['cases']);
@@ -14,12 +18,7 @@ export const DataContainer = () => {
         setRecovered(json['recovered']);
     }
 
-    useEffect(() => {
-        setData();
-    }, []);
-
     return (
-
         <C.ContainerCase>
             <C.CasesContainer>
                 <h3>Casos registrados: </h3>
@@ -32,7 +31,7 @@ export const DataContainer = () => {
                 <p>Ao redor do mundo</p>
             </C.DeathContainer>
             <C.RecoveredContainer>
-                <h3>Casos registrados: </h3>
+                <h3>Recuperados registrados: </h3>
                 <h1>{(recovered).toLocaleString('pt-BR')}</h1>
                 <p>Ao redor do mundo</p>
             </C.RecoveredContainer>
