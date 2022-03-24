@@ -119,8 +119,8 @@ const MapChart = ({ setTooltipContent }: any) => {
                                                 `;
                                             } else if (json[i]['country'] === NAME) {
                                                 result = `
-                                                    Casos: ${json[i]['cases'].toLocaleString('pt-BR')} \n
-                                                    Mortes: ${json[i]['deaths'].toLocaleString('pt-BR')} \n
+                                                    Casos: ${json[i]['cases'].toLocaleString('pt-BR')} <br/>
+                                                    Mortes: ${json[i]['deaths'].toLocaleString('pt-BR')} <br/>
                                                     Recuperados: ${json[i]['recovered'].toLocaleString('pt-BR')}
                                                 `;
                                             }
