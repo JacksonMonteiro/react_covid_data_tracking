@@ -12,7 +12,7 @@ const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-map
 const MapChart = ({ setTooltipContent }: any) => {
     return (
         <>
-            <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
+            <ComposableMap data-tip="" projectionConfig={{ scale: 200 }} style={{ width: "100%" }} >
                 <ZoomableGroup>
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
