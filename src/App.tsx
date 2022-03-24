@@ -6,6 +6,7 @@ import { DataContainer } from "./components/DataContainer";
 import MapChart from "./components/Map";
 import { CasesHistoricalChart } from './components/CasesHistoricalChart';
 import { DeathsHistoricalChart } from './components/DeathsHistoricalChart';
+import { MobileDataContainer } from './components/MobileDataContainer';
 
 const App = () => {
     const [content, setContent] = useState('');
@@ -13,6 +14,7 @@ const App = () => {
     return (
         <div>
             <DataContainer />
+            <MobileDataContainer />
             <C.Container>
                 <C.CBox>
                     <MapChart setTooltipContent={setContent} />

@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCase = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: none;
     margin: 30px auto 0 auto;
     max-width:1000px;
 
@@ -21,8 +19,7 @@ export const ContainerCase = styled.div`
 
     @media (max-width:600px) {
         max-width: 360px;
-        grid-template-columns: 1fr;
-        display: none;
+        display: block;
     }
 `;
 
