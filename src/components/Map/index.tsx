@@ -126,7 +126,7 @@ const MapChart = ({ setTooltipContent }: any) => {
                                             }
                                         }
 
-                                        setTooltipContent(`${NAME} - ${result}`)
+                                        setTooltipContent(`${NAME} <br/> ${result}`)
 
                                         setTimeout(() => {
                                             setTooltipContent("");
