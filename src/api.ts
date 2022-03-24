@@ -13,5 +13,10 @@ export const Api = {
     getMapDapa: async() => {
         let response = await https.get('/countries');
         return response.data;
+    },
+
+    getHistorical: async() => {
+        let response = await https.get('/historical/all?lastdays=7');
+        return response.data;
     }
 }

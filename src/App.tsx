@@ -4,6 +4,8 @@ import { useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { DataContainer } from "./components/DataContainer";
 import MapChart from "./components/Map";
+import { CasesHistoricalChart } from './components/CasesHistoricalChart';
+import { DeathsHistoricalChart } from './components/DeathsHistoricalChart';
 
 const App = () => {
     const [content, setContent] = useState('');
@@ -14,8 +16,12 @@ const App = () => {
             <C.Container>
                 <C.CBox>
                     <MapChart setTooltipContent={setContent} />
+                    <ReactTooltip html={true} >{content}</ReactTooltip>
                 </C.CBox>
-                <ReactTooltip html={true}>{content}</ReactTooltip>
+                <C.ChartBox>
+                    <CasesHistoricalChart />
+                    <DeathsHistoricalChart />
+                </C.ChartBox>
             </C.Container>
         </div>
     );

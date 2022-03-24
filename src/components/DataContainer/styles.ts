@@ -4,7 +4,7 @@ export const ContainerCase = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
     max-width:1000px;
 
     h1 {
@@ -13,6 +13,15 @@ export const ContainerCase = styled.div`
 
     p {
         margin-top: 7px;
+    }
+
+    @media(max-width: 768px) {
+        max-width:720px;
+    }
+
+    @media (max-width:600px) {
+        max-width: 360px;
+        grid-template-columns: 1fr;
     }
 `;
 
