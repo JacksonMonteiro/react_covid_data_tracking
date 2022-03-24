@@ -77,7 +77,7 @@ const MapChart = ({ setTooltipContent }: any) => {
                                         setTooltipContent("");
                                     }}
 
-                                    onPointerDownCapture={async () => {
+                                    onClick={async () => {
                                         const { NAME } = geo.properties;
                                         let json = await Api.getMapDapa();
                                         let result;
